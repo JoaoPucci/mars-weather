@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.json.JSONException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import tech.pucci.mars.marsweather.service.NasaInsightService;
 
 @RestController
 @RequestMapping("/sols")
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class SolController {
 	private NasaInsightService service;
 
